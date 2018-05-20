@@ -1,4 +1,4 @@
-namespace MyShop.DataAcess.SQL.Migrations
+namespace MyShop.WebUI.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -14,7 +14,7 @@ namespace MyShop.DataAcess.SQL.Migrations
                         Id = c.String(nullable: false, maxLength: 128),
                         BasketId = c.String(maxLength: 128),
                         ProductId = c.String(),
-                        Quantity = c.String(),
+                        Quantity = c.Int(nullable: false),
                         CreateAt = c.DateTimeOffset(nullable: false, precision: 7),
                     })
                 .PrimaryKey(t => t.Id)
